@@ -2,7 +2,7 @@ import React from 'react';
 
 const Greeting = (props) => {
   return (
-    <div className="greeting">{`My name is ${props.user.firtstName} ${props.user.lastName}. I'm ${props.user.birthDate} years old`}</div>
+    <div className="greeting">{`My name is ${props.firtstName} ${props.lastName}. I'm ${props.birthDate} years old`}</div>
   );
 };
 

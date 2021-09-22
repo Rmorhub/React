@@ -19,4 +19,4 @@ const johnDoe = {
 
 const rootElement = document.querySelector('#root');
 
-ReactDOM.render(<Greeting user={johnDoe} />, rootElement);
+ReactDOM.render(<Greeting firtstName={johnDoe.firtstName} lastName={johnDoe.lastName} birthDate={johnDoe.birthDate} />, rootElement);
