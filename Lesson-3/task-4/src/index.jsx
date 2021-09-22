@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import Greeting from './Greeting';
 import './index.scss';
 
-const johnBirthdate = new Date('2001-01-01T11:11:11.819Z');
+const birthDate = new Date('2001-01-01T11:11:11.819Z');
 
-const johnDoeAge = (date) => {
+const age = (date) => {
   const diff = new Date() - date;
   const age = new Date(diff).getFullYear() - 1970;
   return age;
@@ -14,7 +14,7 @@ const johnDoeAge = (date) => {
 const johnDoe = {
   firtstName: 'John',
   lastName: 'Doe',
-  birthdate: johnDoeAge(johnBirthdate),
+  birthdate: age(birthDate),
 };
 
 const rootElement = document.querySelector('#root');
