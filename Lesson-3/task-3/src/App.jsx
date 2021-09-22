@@ -2,7 +2,7 @@ import React from 'react';
 import Comment from './comment';
 
 const userInfo = {
-  name: 'Stanislav',
+  name: 'Tom',
   avatarUrl: 'https://avatars1.githubusercontent.com/Rmorhub',
 };
 
