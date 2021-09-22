@@ -6,6 +6,7 @@ const age = (date) => {
   return age;
 };
 
+
 const Greeting = (props) => {
   return (
     <div className="greeting">{`My name is ${props.firtstName} ${props.lastName}. I'm ${age(props.birthDate)} years old`}</div>
