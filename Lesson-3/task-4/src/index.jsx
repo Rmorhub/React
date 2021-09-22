@@ -14,7 +14,7 @@ const age = (date) => {
 const johnDoe = {
   firtstName: 'John',
   lastName: 'Doe',
-  birthdate: age(birthDate),
+  birthDate: age(birthDate),
 };
 
 const rootElement = document.querySelector('#root');
@@ -23,7 +23,7 @@ ReactDOM.render(
   <Greeting
     firtstName={johnDoe.firtstName}
     lastName={johnDoe.lastName}
-    birthdate={johnDoe.birthdate}
+    birthdate={johnDoe.birthDate}
   />,
   rootElement
 );
