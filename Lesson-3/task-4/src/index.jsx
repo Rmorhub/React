@@ -21,9 +21,7 @@ const rootElement = document.querySelector('#root');
 
 ReactDOM.render(
   <Greeting
-    firtstName={johnDoe.firtstName}
-    lastName={johnDoe.lastName}
-    birthDate={johnDoe.birthDate}
+    user={johnDoe}
   />,
   rootElement
 );
