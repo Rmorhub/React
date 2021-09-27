@@ -4,17 +4,17 @@ class Toggler extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      input: 'On',
+      input: 'Off',
     };
   }
 
   toggle() {
-    this.state.input === 'On'
+    this.state.input === 'Off'
       ? this.setState({
-          input: 'Off',
+          input: 'On',
         })
       : this.setState({
-          input: 'On',
+          input: 'Off',
         });
   }
 
