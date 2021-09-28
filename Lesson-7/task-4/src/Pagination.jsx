@@ -7,26 +7,25 @@ const Pagination = ({
   totalItems,
   itemPerPage,
 }) => {
-  const isPrevPageAvailable = 1;
-  const isNextPageAvailable = Math.ceil(totalItems / itemPerPage);
-  const nextArrow = currentPage === isNextPageAvailable ? '' : '→';
-  const previousArrow = currentPage === isPrevPageAvailable ? '' : '←';
+  const isPrevPageAvailable = totalItems % itemPerPage !== 0;
+  const isNextPageAvailable = totalItems % itemPerPage === 0;
+  const maxPage = Math.ceil(totalItems / itemPerPage);
   return (
     <div className="pagination">
       <button
         className="btn"
         onClick={goPrev}
-        disabled={currentPage <= isPrevPageAvailable}
+        disabled={currentPage === 1 ? isPrevPageAvailable : false}
       >
-        {previousArrow}
+        {currentPage === 1 ? '' : '←'}
       </button>
       <span className="pagination__page">{currentPage}</span>
       <button
         className="btn"
         onClick={goNext}
-        disabled={currentPage >= isNextPageAvailable}
+        disabled={currentPage === maxPage ? isPrevPageAvailable : false}
       >
-        {nextArrow}
+        {currentPage === maxPage ? '' : '→'}
       </button>
     </div>
   );
