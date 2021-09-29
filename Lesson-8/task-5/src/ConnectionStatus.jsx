@@ -5,7 +5,6 @@ class ConnectionStatus extends Component {
     super(props);
     this.state = {
       online: true,
-      offline: false,
     };
   }
   onToggle = (event) => {
@@ -13,7 +12,6 @@ class ConnectionStatus extends Component {
     console.log('here');
     this.setState({
       online: onLine,
-      offline: !onLine,
     });
   };
 
