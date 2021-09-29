@@ -9,7 +9,6 @@ class ConnectionStatus extends Component {
   }
   onToggle = (event) => {
     const { onLine } = event.target.navigator;
-    console.log('here');
     this.setState({
       online: onLine,
     });
