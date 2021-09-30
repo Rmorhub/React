@@ -4,7 +4,7 @@ class UserForm extends Component {
   onSubmit = (event) => {
     event.preventDefault();
     const formData = Object.fromEntries(new FormData(this.formRef));
-    console.log(formData);
+    this.props.onSubmit(formData);
   };
 
   formDate = (node) => {
