@@ -29,7 +29,7 @@ class UserList extends Component {
           onChange={this.onChange}
           count={users.length}
         />
-        <div className="users">{users}</div>
+        <ul className="users">{users}</ul>
       </div>
     );
   }
