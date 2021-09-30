@@ -17,14 +17,14 @@ class UserForm extends Component {
     });
   };
 
-  createUser = (event) => {
+  onSubmit = (event) => {
     event.preventDefault();
     console.log(this.state);
   };
 
   render() {
     return (
-      <form className="login-form" onSubmit={this.createUser}>
+      <form className="login-form" onSubmit={this.onSubmit}>
         <h1 name="form-title">Profile</h1>
         <div className="form-control">
           <label className="form-label" htmlFor="name">
