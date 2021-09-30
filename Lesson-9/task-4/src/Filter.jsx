@@ -8,7 +8,7 @@ class Filter extends Component {
         <input
           type="text"
           className="filter__input"
-          value={this.props.value}
+          value={this.props.filterText}
           onChange={this.props.onChange}
         />
       </div>
