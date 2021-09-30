@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 
 class UserForm extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: '',
-      student: '',
-      occupation: '',
-      about: '',
-    };
-  }
+  state = {
+    name: '',
+    student: '',
+    occupation: '',
+    about: '',
+  };
+
   handleChange = (event) => {
     const { name, value, checked, type } = event.target;
 
@@ -19,9 +17,14 @@ class UserForm extends Component {
     });
   };
 
+  onSubmit = (event) => {
+    event.preventDefault();
+    this.props.onSubmit(this.state);
+  };
+
   render() {
     return (
-      <form className="login-form" onSubmit={this.props.onSubmit(this.state)}>
+      <form className="login-form" onSubmit={this.onSubmit}>
         <h1 name="form-title">Profile</h1>
         <div className="form-control">
           <label className="form-label" htmlFor="name">
