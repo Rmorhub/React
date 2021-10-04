@@ -1,5 +1,5 @@
 import React from 'react';
-import UserForm from './ProductList';
+import UserForm from './UserForm';
 
 const Profile = ({ userDate, handleChange }) => {
   return (
