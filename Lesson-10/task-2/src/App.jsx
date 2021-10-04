@@ -25,7 +25,7 @@ class Page extends Component {
       <div className="page">
         <h1 className="title">{`Hello, ${userDate.firstName} ${userDate.lastName}`}</h1>
         <main className="content">
-          <ShoppingCart userDate={userDate} />
+          <ShoppingCart userName={userDate.firstName} />
           <Profile userDate={userDate} handleChange={this.handleChange} />
         </main>
       </div>
