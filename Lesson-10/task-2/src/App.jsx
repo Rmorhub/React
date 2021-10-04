@@ -1,0 +1,36 @@
+import React, { Component } from 'react';
+import ShoppingCart from './ShoppingCart';
+import Profile from './Profile';
+
+class Page extends Component {
+  state = {
+    userDate: {
+      firstName: 'John',
+      lastName: 'Form',
+    },
+  };
+
+  handleChange = (event) => {
+    const { name, value } = event.target;
+    this.setState({
+      userDate: {
+        ...this.state.userDate,
+        [name]: value,
+      },
+    });
+  };
+  render() {
+    const { userDate } = this.state;
+    return (
+      <div className="page">
+        <h1 className="title">{`Hello,${userDate.firstName} ${userDate.lastName}`}</h1>
+        <main className="content">
+          <ShoppingCart userDate={userDate} />
+          <Profile userDate={userDate} handleChange={this.handleChange} />
+        </main>
+      </div>
+    );
+  }
+}
+
+export default Page;
