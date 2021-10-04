@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ProductList from './ProductsList';
+import ProductsList from './ProductsList';
 import CartTitle from './CartTitle';
 
 class ShoppingCart extends Component {
@@ -19,10 +19,11 @@ class ShoppingCart extends Component {
   };
   render() {
     const count = this.state.cartItems.length;
+    console.log(this.state.cartItems);
     return (
       <div className="column">
         <CartTitle userName={this.props.userName} count={count} />
-        <ProductList cartItems={this.state.cartItems} />
+        <ProductsList cartItems={this.state.cartItems} />
       </div>
     );
   }
