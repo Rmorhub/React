@@ -21,7 +21,6 @@ class UserList extends Component {
     const users = filterUsers.map(({ id, name, age }) => (
       <User key={id} name={name} age={age} />
     ));
-
     return (
       <div>
         <Filter
@@ -29,7 +28,7 @@ class UserList extends Component {
           onChange={this.onChange}
           count={users.length}
         />
-        {users}
+        <ul className="users"> {users}</ul>
       </div>
     );
   }
