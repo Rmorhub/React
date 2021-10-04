@@ -14,13 +14,14 @@ class UserList extends Component {
   render() {
     const filterUsers = !this.state.value
       ? this.props.users
-      : this.props.users.filter(
-          ({ name }) => name.toLowerCase() === this.state.value.toLowerCase()
+      : this.props.users.filter(({ name }) =>
+          name.toLowerCase().includes(this.state.value.toLowerCase())
         );
 
     const users = filterUsers.map(({ id, name, age }) => (
       <User key={id} name={name} age={age} />
     ));
+
     return (
       <div>
         <Filter
@@ -28,7 +29,7 @@ class UserList extends Component {
           onChange={this.onChange}
           count={users.length}
         />
-        <ul className="users"> {users}</ul>
+        <ul className="users">{users}</ul>
       </div>
     );
   }
