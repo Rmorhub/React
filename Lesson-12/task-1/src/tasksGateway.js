@@ -15,7 +15,7 @@ export const createTask = taskData =>
 
 export const fetchTasksList = () =>
   fetch(baseUrl)
-    .then(response => {
+    .then(response => { // eslint-disable-line consistent-return
       if (response.ok) return response.json();
     })
     .then(taskList => taskList);
