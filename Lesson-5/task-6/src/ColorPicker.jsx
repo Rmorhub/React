@@ -11,11 +11,13 @@ class ColorPicker extends React.Component {
       color: null,
     };
   }
+
   over = (color) => {
     this.setState({
-      color: color,
+      color,
     });
   };
+
   out = () => {
     this.setState({
       color: null,
