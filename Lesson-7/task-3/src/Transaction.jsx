@@ -1,8 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 
-const Transaction = ({ time, from, to, rate, amount }) => {
-  return (
+const Transaction = ({ time, from, to, rate, amount }) => (
     <li className="transaction">
       <span className="transaction__date">{moment(time).format('DD MMM')}</span>
       <span className="transaction__time">{moment(time).format('HH:mm')}</span>
@@ -15,6 +14,5 @@ const Transaction = ({ time, from, to, rate, amount }) => {
       </span>
     </li>
   );
-};
 
 export default Transaction;

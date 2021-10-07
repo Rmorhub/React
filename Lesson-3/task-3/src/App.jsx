@@ -6,14 +6,12 @@ const userInfo = {
   avatarUrl: 'https://avatars1.githubusercontent.com/Rmorhub',
 };
 
-const App = () => {
-  return (
+const App = () => (
     <Comment
       author={userInfo}
       text="Good job!"
       date={new Date()}
     />
   );
-};
 
 export default App;
