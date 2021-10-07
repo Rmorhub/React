@@ -38,7 +38,7 @@ class Auth extends React.Component {
           <Spinner size={40} />
         </div>
       );
-    } else {
+    } 
       return (
         <div className="panel">
           {this.state.isLoggedIn ? (
@@ -48,7 +48,7 @@ class Auth extends React.Component {
           )}
         </div>
       );
-    }
+    
   }
 }
 

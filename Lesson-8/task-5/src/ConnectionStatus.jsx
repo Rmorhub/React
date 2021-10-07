@@ -7,6 +7,7 @@ class ConnectionStatus extends Component {
       online: true,
     };
   }
+
   onToggle = (event) => {
     const { onLine } = event.target.navigator;
     this.setState({
@@ -27,9 +28,9 @@ class ConnectionStatus extends Component {
   render() {
     if (this.state.online) {
       return <div className="status">online</div>;
-    } else {
+    } 
       return <div className="status status_offline">offline</div>;
-    }
+    
   }
 }
 
