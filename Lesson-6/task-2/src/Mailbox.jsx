@@ -1,7 +1,6 @@
 import React from 'react';
 
-const Mailbox = ({ unreadMessages }) => {
-  return (
+const Mailbox = ({ unreadMessages }) => (
     <div className="mailbox">
       <span className="mailbox__text"> Messages</span>
       {unreadMessages.length > 0 && (
@@ -9,6 +8,5 @@ const Mailbox = ({ unreadMessages }) => {
       )}
     </div>
   );
-};
 
 export default Mailbox;

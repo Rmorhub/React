@@ -24,6 +24,7 @@ class Clock extends Component {
       });
     }, 1000);
   }
+
   render() {
     return (
       <div className="clock">

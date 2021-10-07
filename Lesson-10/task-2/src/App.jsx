@@ -19,6 +19,7 @@ class Page extends Component {
       },
     });
   };
+
   render() {
     const { userDate } = this.state;
     return (

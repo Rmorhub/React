@@ -24,6 +24,7 @@ class Clock extends Component {
       });
     }, 1000);
   }
+
   componentWillUnmount() {
     clearInterval(this.interval);
   }
