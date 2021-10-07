@@ -13,13 +13,13 @@ class FilterableProductTable extends React.Component {
 
   handleFilterTextChange = (filterText) => {
     this.setState({
-      filterText: filterText,
+      filterText,
     });
   };
 
   handleInStockChange = (inStockOnly) => {
     this.setState({
-      inStockOnly: inStockOnly,
+      inStockOnly,
     });
   };
 

@@ -28,7 +28,7 @@ class UsersList extends React.Component {
   };
 
   render() {
-    const users = this.props.users;
+    const {users} = this.props;
     const sliceFrom = this.state.currentPage === 1 ? 0 : this.state.from;
     const sliceTo = this.state.currentPage === 1 ? 3 : this.state.to;
 

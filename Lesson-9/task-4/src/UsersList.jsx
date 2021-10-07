@@ -6,11 +6,13 @@ class UserList extends Component {
   state = {
     value: '',
   };
+
   onChange = (event) => {
     this.setState({
       value: event.target.value,
     });
   };
+
   render() {
     const filterUsers = !this.state.value
       ? this.props.users
