@@ -15,6 +15,7 @@ class Counter extends Component {
       });
     }, props.interval);
   }
+
   render() {
     return <div className="counter">{this.state.counter}</div>;
   }
