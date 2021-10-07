@@ -11,16 +11,19 @@ class Demo extends Component {
       visible: true,
     });
   };
+
   hide = () => {
     this.setState({
       visible: false,
     });
   };
+
   update = () => {
     this.setState({
       number: Math.round(Math.random() * 100),
     });
   };
+
   render() {
     return (
       <div>

@@ -6,6 +6,7 @@ class Page extends Component {
   state = {
     userData: null,
   };
+
   componentDidMount() {
     this.fetchUserData(this.props.userId);
   }
