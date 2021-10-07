@@ -1,3 +1,4 @@
 node_modules
-dist
-build
+.idea
+.VS_Code
+package-lock.json
