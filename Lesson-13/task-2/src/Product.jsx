@@ -1,9 +1,9 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-function Contacts() {
+function Product() {
   const { productId } = useParams();
   return <div className="product">{productId}</div>;
 }
 
-export default Contacts;
+export default Product;
