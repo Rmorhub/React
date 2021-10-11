@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import User from './User.jsx';
 
-const Counter = () => (
+const App = () => (
   <div className="page">
     <Router>
       <div className="page__content">
@@ -28,4 +28,4 @@ const Counter = () => (
   </div>
 );
 
-export default Counter;
+export default App;
