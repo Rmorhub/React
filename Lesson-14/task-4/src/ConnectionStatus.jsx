@@ -1,18 +1,15 @@
 import React, { useState, useEffect } from 'react';
 
 const ConnectionStatus = () => {
-  const [status, setStatus] = useState({
-    onlineStatus: true,
-  });
+  const [status, setStatus] = useState(true);
 
   useEffect(() => {
     const handleResize = event => {
-      console.log(event)
       const online = event.type;
       if (online === 'online') {
-        setStatus({ onlineStatus: true });
+        setStatus(true);
       } else {
-        setStatus({ onlineStatus: false });
+        setStatus(false);
       }
     };
     window.addEventListener('online', handleResize);
@@ -23,8 +20,7 @@ const ConnectionStatus = () => {
     };
   }, []);
 
-  const { onlineStatus } = status;
-  if (onlineStatus) {
+  if (status) {
     return <div className="status status">Online</div>;
   }
   return <div className="status status_offline">Offline</div>;
