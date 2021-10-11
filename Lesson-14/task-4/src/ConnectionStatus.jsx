@@ -4,13 +4,9 @@ const ConnectionStatus = () => {
   const [status, setStatus] = useState(true);
 
   useEffect(() => {
-    const handleResize = event => {
-      const online = event.type;
-      if (online === 'online') {
-        setStatus(true);
-      } else {
-        setStatus(false);
-      }
+    const handleResize = () => {
+      const online = window.navigator.onLine;
+      setStatus(online);
     };
     window.addEventListener('online', handleResize);
     window.addEventListener('offline', handleResize);
