@@ -17,9 +17,9 @@ const ConnectionStatus = () => {
   }, []);
 
   if (status) {
-    return <div className="status status">online</div>;
+    return <div className="status">online</div>;
   }
-  return <div className="status status_offline">Offline</div>;
+  return <div className="status status_offline">offline</div>;
 };
 
 export default ConnectionStatus;
