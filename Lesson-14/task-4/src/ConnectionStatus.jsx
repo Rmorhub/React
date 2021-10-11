@@ -5,8 +5,7 @@ const ConnectionStatus = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      const online = window.navigator.onLine;
-      setStatus(online);
+      setStatus(window.navigator.onLine);
     };
     window.addEventListener('online', handleResize);
     window.addEventListener('offline', handleResize);
@@ -17,7 +16,7 @@ const ConnectionStatus = () => {
   }, []);
 
   if (!status) {
-    return <div className="status status_offline">Offline</div>;
+    return <div className="status status_offline">offline</div>;
   }
   return <div className="status">online</div>;
 };
